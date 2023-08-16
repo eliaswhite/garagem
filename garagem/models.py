@@ -51,6 +51,7 @@ class Modelo(models.Model):
 
 
 class Veiculo(models.Model):
+    acessorios = models.ManyToManyField(Acessorio, related_name="veiculos")
     descricao = models.CharField(max_length=100, default="")
     preco = models.DecimalField(
         max_digits=10, decimal_places=2, default=0, null=True, blank=True
