@@ -21,7 +21,6 @@ class Acessorio(models.Model):
 
     class Meta:
         verbose_name = "acessório"
-        verbose_name_plural = "acessórios"
 
    
 class Cor(models.Model):
@@ -42,3 +41,6 @@ class Veiculo(models.Model):
 
     def __str__(self):
         return f"{self.marca} ({self.categoria}, {self.ano}, {self.cor})"
+    
+    class Meta:
+        verbose_name = "Veículo"
